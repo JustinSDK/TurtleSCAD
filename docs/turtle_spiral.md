@@ -1,5 +1,4 @@
-# TurtleSCAD
-Turtle Graphics implemented by OpenSCAD
+# Turtle spiral generator
 
 Imagine there's a turtle drawing the line spirally. See the following examples directly.
 
