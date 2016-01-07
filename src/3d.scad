@@ -27,6 +27,24 @@ module cylinder_character(character, arc_angle, radius, font = "Courier New:styl
     }
 } 
 
+// It has the same visual effect as `cylinder_character`, but each character is created by the `text` module. Use this module if your `arc_angle` is small enough and you want to render a model quickly. 
+// Parameters: 
+//     character - 3D character you want to create
+//     arc_angle - angle which the character go across
+//     radius - the cylinder radius
+//     font - the character font
+//     thickness - the character thickness
+//     font_factor - use this parameter to scale the calculated font if necessary
+module fake_cylinder_character(character, arc_angle, radius, font = "Courier New:style=Bold", thickness = 1, font_factor = 1) {
+    half_arc_angle = arc_angle / 2;
+    font_size = 2 * radius * sin(half_arc_angle) * font_factor;
+
+    translate([radius, 0, 0]) rotate([90, 0, 90]) 
+        linear_extrude(thickness) 
+            text(character, font = font, size = font_size, halign = "center");
+    
+} 
+
 // Create a chain text around a cylinder.
 // Parameters: 
 //     text - the text you want to create
