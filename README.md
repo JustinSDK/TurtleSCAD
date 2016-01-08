@@ -12,4 +12,5 @@ Turtle Graphics implemented by OpenSCAD
 
 
 - [Character tower generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/tower_of_characters.md)
+
 ![Character tower generator](http://thingiverse-production-new.s3.amazonaws.com/renders/64/d0/47/ef/eb/i_turn_coffee_into_code_preview_featured.jpg)
