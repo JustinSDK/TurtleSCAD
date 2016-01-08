@@ -1,7 +1,7 @@
 use <2d.scad>
 
 //////////////
-// 2D Module
+// 3D Module
 //
 
 // Create a 3D character around a cylinder. The `radius` and `arc_angle` determine the font size of the character. 
@@ -71,4 +71,15 @@ module chain_text_chinese(text, radius, thickness = 1) {
         rotate([0, 0, i * arc_angle]) 
             cylinder_character(text[i], arc_angle, radius, "·L³n¥¿¶ÂÅé", thickness, 0.85);
     }
+}
+
+// Create a hollow_sphere with a inner `radius`.
+// Parameters: 
+//     radius - the sphere radius
+//     thickness - the thickness of the sphere
+module hollow_sphere(radius, thickness = 1) {
+    difference() {
+	    sphere(radius + thickness, $fn = 96);
+        sphere(radius, $fn = 96);
+	}
 }
