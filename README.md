@@ -1,6 +1,6 @@
 # TurtleSCAD
 
-Turtle Graphics implemented by OpenSCAD
+A simple OpenSCAD library.
 
 - [Turtle spiral generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/turtle_spiral.md)
 
