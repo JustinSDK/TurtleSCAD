@@ -1,0 +1,125 @@
+use <2d.scad>;
+
+house_radius = 50;
+wall_thickness = 1.5;
+hang_ring_radius = 5;
+door_ring_radius = 4;
+
+// 2D module, composed of a semi-circle and a square. The square's length is equal to the circle radius.
+//
+// Parameters: 
+//     house_radius - the semi-circle radius of the house
+module bird_house_2d_contour(house_radius) {
+    sector(house_radius, [0, 180], 1);
+    translate([0, -house_radius / 2, 0]) 
+	    square([house_radius * 2, house_radius], center = true);
+}
+
+// The brid house with no bottom. The door radius is 1/2 `house_radius`. 
+// The house depth is double `house_radius`. 
+// Choose a suitable `door_ring_radius` for your bird's claw size.
+//
+// Parameters: 
+//     house_radius - the semi-circle radius of the house
+//     door_ring_radius - the ring radius on the door
+//     wall_thickness - the wall thicnkess.
+module bird_house_body(house_radius, door_ring_radius, wall_thickness) {
+    door_radius = house_radius / 2;
+    house_depth = house_radius * 2;
+	
+	difference() {
+	    // create the room
+		linear_extrude(house_depth) 
+			bird_house_2d_contour(house_radius);
+			
+		translate([0, 0, wall_thickness]) 
+			linear_extrude(house_depth - wall_thickness * 2) 
+				bird_house_2d_contour(house_radius - wall_thickness);
+				
+		// remove the bottom
+        translate([0, -house_radius + wall_thickness, 0]) rotate([90, 0, 0]) 
+		    linear_extrude(wall_thickness * 2) 
+		        translate([-house_radius, 0, 0]) 
+				    square(house_radius * 2);
+				
+		// create a door
+		translate([0, 0, wall_thickness]) 
+		    linear_extrude(house_depth) 
+			    circle(door_radius);
+	}    
+
+	// create the door ring
+	translate([0, 0, house_radius * 2]) 
+		rotate_extrude(convexity = 10) 
+			translate([house_radius / 2 + door_ring_radius, 0, 0]) 
+				circle(door_ring_radius, $fn = 24);													
+}
+
+// The bottom of the bird house. 
+// 
+// Parameters: 
+//     length - the length of the bottom side
+//     wall_thickness - the wall thicnkess.
+module bird_house_bottom(length, wall_thickness) {
+    spacing = 0.6;
+	five_wall_thickness = wall_thickness * 5;
+	scale = 0.95;
+	
+	// the outside bottom
+	difference() {
+		linear_extrude(five_wall_thickness)
+			square(length, center = true);
+				
+		linear_extrude(five_wall_thickness, scale = scale) 
+			square(length - wall_thickness * 2, center = true);
+	}
+
+	// the inside bottom
+	linear_extrude(five_wall_thickness, scale = scale)
+		square(length - (wall_thickness + spacing) * 2, center = true);
+}
+
+// The hang ring of the bird house. 
+// 
+// Parameters: 
+//     ring_radius - the radius of the hang ring
+//     house_radius - the semi-circle radius of the house
+//     wall_thickness - the wall thicnkess.
+module hang_ring(ring_radius, house_radius, wall_thickness) {
+    offset = (house_radius - 0.525 * wall_thickness) / 0.475 / 2;
+	
+    translate([offset, -house_radius - wall_thickness * 2, offset]) 
+	    rotate([0, 90, -90]) 
+	        linear_extrude(wall_thickness * 2) 
+		        arc(ring_radius, [0, 180], wall_thickness * 2);
+}
+
+// A bird house. 
+// The door radius is 1/2 `house_radius`. 
+// The house depth is double `house_radius`. 
+// Choose a suitable `door_ring_radius` for your bird's claw size.
+// 
+// Parameters: 
+//     ring_radius - the radius of the hang ring
+//     house_radius - the semi-circle radius of the house
+//     door_ring_radius - the ring radius on the door. 
+//     wall_thickness - the wall thicnkess.
+module bird_house(house_radius, hang_ring_radius, door_ring_radius, wall_thickness) {
+     bird_house_body(house_radius, door_ring_radius, wall_thickness);
+
+    length = (house_radius - 0.525 * wall_thickness) / 0.475;
+
+    translate([0, -house_radius - wall_thickness * 4, house_radius])   
+        rotate([-90, 0, 0]) 
+            bird_house_bottom(length, wall_thickness);
+
+    hang_ring(hang_ring_radius, house_radius, wall_thickness);
+    mirror([1, 0, 0]) 
+	    hang_ring(hang_ring_radius, house_radius, wall_thickness);			
+}
+
+rotate([90, 0, 0])
+    bird_house(house_radius, hang_ring_radius, door_ring_radius, wall_thickness);
+	
+
+
