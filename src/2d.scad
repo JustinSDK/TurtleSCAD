@@ -64,9 +64,9 @@ function PI() = 3.14159;
 
 // Given a `radius` and `angle`, draw an arc from zero degree to `angle` degree. The `angle` ranges from 0 to 90.
 // Parameters: 
-//     radius - the radius of arc
-//     angle - the angle of arc
-//     width - the width of arc
+//     radius - the arc radius 
+//     angle - the arc angle 
+//     width - the arc width 
 module a_quarter_arc(radius, angle, width = 1) {
     outer = radius + width;
     intersection() {
@@ -80,9 +80,9 @@ module a_quarter_arc(radius, angle, width = 1) {
 
 // Given a `radius` and `angles`, draw an arc from `angles[0]` degree to `angles[1]` degree. 
 // Parameters: 
-//     radius - the radius of arc
-//     angle - the angle of arc
-//     width - the width of arc
+//     radius - the arc radius 
+//     angles - the arc angles 
+//     width - the arc width
 module arc(radius, angles, width = 1) {
     angle_from = angles[0];
     angle_to = angles[1];
@@ -106,7 +106,7 @@ module arc(radius, angles, width = 1) {
 // Given a `radius` and `angle`, draw a sector from zero degree to `angle` degree. The `angle` ranges from 0 to 90.
 // Parameters: 
 //     radius - the sector radius
-//     angle - the sector angle 
+//     angle - the sector angle
 module a_quarter_sector(radius, angle) {
     intersection() {
         circle(radius, $fn=96);
