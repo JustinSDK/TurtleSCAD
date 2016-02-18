@@ -78,7 +78,7 @@ module a_quarter_arc(radius, angle, width = 1) {
     }
 }
 
-// Given a `radius` and `angle`, draw an arc from zero degree to `angle` degree. The `angle` ranges from 0 to 360.
+// Given a `radius` and `angles`, draw an arc from `angles[0]` degree to `angles[1]` degree. 
 // Parameters: 
 //     radius - the radius of arc
 //     angle - the angle of arc
@@ -100,5 +100,41 @@ module arc(radius, angles, width = 1) {
         } else if(angle_difference > 270 && angle_difference <= 360) {
             arc(radius, [0, 270], width);
             rotate(270) a_quarter_arc(radius, angle_difference - 270, width);
+       }
+}
+
+// Given a `radius` and `angle`, draw a sector from zero degree to `angle` degree. The `angle` ranges from 0 to 90.
+// Parameters: 
+//     radius - the sector radius
+//     angle - the sector angle 
+module a_quarter_sector(radius, angle) {
+    intersection() {
+        circle(radius, $fn=96);
+        
+        polygon([[0, 0], [radius, 0], [radius, radius * sin(angle)], [radius * cos(angle), radius * sin(angle)]]);
+    }
+}
+
+// Given a `radius` and `angle`, draw a sector from `angles[0]` degree to `angles[1]` degree. 
+// Parameters: 
+//     radius - the sector radius
+//     angles - the sector angles
+module sector(radius, angles) {
+    angle_from = angles[0];
+    angle_to = angles[1];
+    angle_difference = angle_to - angle_from;
+
+    rotate(angle_from)
+        if(angle_difference <= 90) {
+            a_quarter_sector(radius, angle_difference);
+        } else if(angle_difference > 90 && angle_difference <= 180) {
+            sector(radius, [0, 90]);
+            rotate(90) a_quarter_sector(radius, angle_difference - 90);
+        } else if(angle_difference > 180 && angle_difference <= 270) {
+            sector(radius, [0, 180]);
+            rotate(180) a_quarter_sector(radius, angle_difference - 180);
+        } else if(angle_difference > 270 && angle_difference <= 360) {
+            sector(radius, [0, 270]);
+            rotate(270) a_quarter_sector(radius, angle_difference - 270);
        }
 }
