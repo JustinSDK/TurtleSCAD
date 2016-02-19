@@ -15,7 +15,7 @@ module bird_house_2d_contour(house_radius) {
 	    square([house_radius * 2, house_radius], center = true);
 }
 
-// The brid house with no bottom. The door radius is 1/2 `house_radius`. 
+// The brid house with no top. The door radius is 1/2 `house_radius`. 
 // The house depth is double `house_radius`. 
 // Choose a suitable `door_ring_radius` for your bird's claw size.
 //
@@ -36,7 +36,7 @@ module bird_house_body(house_radius, door_ring_radius, wall_thickness) {
 			linear_extrude(house_depth - wall_thickness * 2) 
 				bird_house_2d_contour(house_radius - wall_thickness);
 				
-		// remove the bottom
+		// remove the top
         translate([0, -house_radius + wall_thickness, 0]) rotate([90, 0, 0]) 
 		    linear_extrude(wall_thickness * 2) 
 		        translate([-house_radius, 0, 0]) 
@@ -55,17 +55,17 @@ module bird_house_body(house_radius, door_ring_radius, wall_thickness) {
 				circle(door_ring_radius, $fn = 24);													
 }
 
-// The bottom of the bird house. 
+// The top cover of the bird house. 
 // 
 // Parameters: 
-//     length - the length of the bottom side
+//     length - the length of the cover side
 //     wall_thickness - the wall thicnkess.
-module bird_house_bottom(length, wall_thickness) {
+module bird_house_cover(length, wall_thickness) {
     spacing = 0.6;
 	five_wall_thickness = wall_thickness * 5;
 	scale = 0.95;
 	
-	// the outside bottom
+	// the outer cover
 	difference() {
 		linear_extrude(five_wall_thickness)
 			square(length, center = true);
@@ -74,7 +74,7 @@ module bird_house_bottom(length, wall_thickness) {
 			square(length - wall_thickness * 2, center = true);
 	}
 
-	// the inside bottom
+	// the inner cover
 	linear_extrude(five_wall_thickness, scale = scale)
 		square(length - (wall_thickness + spacing) * 2, center = true);
 }
@@ -111,7 +111,7 @@ module bird_house(house_radius, hang_ring_radius, door_ring_radius, wall_thickne
 
     translate([0, -house_radius - wall_thickness * 4, house_radius])   
         rotate([-90, 0, 0]) 
-            bird_house_bottom(length, wall_thickness);
+            bird_house_cover(length, wall_thickness);
 
     hang_ring(hang_ring_radius, house_radius, wall_thickness);
     mirror([1, 0, 0]) 
@@ -120,6 +120,3 @@ module bird_house(house_radius, hang_ring_radius, door_ring_radius, wall_thickne
 
 rotate([90, 0, 0])
     bird_house(house_radius, hang_ring_radius, door_ring_radius, wall_thickness);
-	
-
-
