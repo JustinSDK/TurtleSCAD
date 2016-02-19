@@ -19,3 +19,7 @@ A simple OpenSCAD library.
 - [Characters container generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/characters_container.md)
 
 ![Characters container generator](http://thingiverse-production-new.s3.amazonaws.com/renders/3e/47/84/7b/93/f9c87e3a302574c8fd154871e4e32743_preview_featured.jpg)
+
+- [Bird House](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/bird_house.md)
+
+![Bird House](http://thingiverse-production-new.s3.amazonaws.com/renders/57/af/95/1a/75/e45283242b0bbc9b37575eba250b1c21_preview_featured.JPG)
