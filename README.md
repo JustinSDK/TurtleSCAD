@@ -23,3 +23,7 @@ A simple OpenSCAD library.
 - [Bird House](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/bird_house.md)
 
 ![Bird House](http://thingiverse-production-new.s3.amazonaws.com/renders/57/af/95/1a/75/e45283242b0bbc9b37575eba250b1c21_preview_featured.JPG)
+
+- [3D love heart generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/3d_love_heart_generator.md)
+
+![3D love heart generator](http://thingiverse-production-new.s3.amazonaws.com/renders/7e/10/f4/8a/ec/a1b9113936b7bc01fe12c1159e527a30_preview_featured.JPG)
