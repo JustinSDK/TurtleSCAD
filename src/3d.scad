@@ -144,3 +144,45 @@ module ring_text_without_projection(text, radius, font_density = 1) {
 		
 	}
 }
+
+// The equation of an ellipse.
+//
+// Parameters:
+//      major_axe - length of the major axe 
+//      minor_axe - length of the minor axe 
+//      a - an independent parameter which increases from 0 to 360
+function eclipse_y(major_axe, a) = major_axe * cos(a);
+function eclipse_z(minor_axe, a) = minor_axe * sin(a);
+
+// Create one side of the eclipse heart.
+//
+// Parameters:
+//      major_axe - length of the major axe 
+//      minor_axe - length of the minor axe 
+//      layer_factor - the layer_factor, from 1 to 90
+//      tip_factor - the sharpness of the heart tip
+module eclipse_heart_one_side(major_axe,  minor_axe, layer_factor, tip_factor) {
+	for(a = [0 : layer_factor : 90]) {
+		heart_height = eclipse_y( minor_axe, a) ;
+		prev_heart_thickness = a == 0 ? 0 : eclipse_z(major_axe, a - layer_factor); 
+		
+		linear_height = eclipse_z(major_axe, a) - prev_heart_thickness;
+		linear_scale = eclipse_y( minor_axe, a + layer_factor) / heart_height;
+		
+		translate([0, 0, prev_heart_thickness]) 
+			linear_extrude(linear_height, scale = linear_scale) 
+				solid_heart(heart_height, tip_factor);
+	}
+}
+
+// Create an eclipse heart.
+//
+// Parameters:
+//      major_axe - length of the major axe 
+//      minor_axe - length of the minor axe 
+//      layer_factor - the layer_factor, from 1 to 90
+//      tip_factor - the sharpness of the heart tip
+module eclipse_heart(major_axe,  minor_axe, layer_factor, tip_factor) {
+	eclipse_heart_one_side(major_axe,  minor_axe, layer_factor, tip_factor);
+	mirror([0, 0, 1]) eclipse_heart_one_side(major_axe,  minor_axe, layer_factor, tip_factor);
+}
