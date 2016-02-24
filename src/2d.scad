@@ -152,14 +152,14 @@ module solid_heart(radius, tip_factor) {
 	
     translate([radius * cos(45), offset_h, 0]) rotate([0, 0, -45])
     hull() {
-        sector(radius, [0, 180]);
+        circle(radius, $fn = 96);
 		translate([radius - tip_radius, -radius * 2 + tip_radius, 0]) 
-		    circle(tip_radius, center = true, $fn = 48);
+		    circle(tip_radius, center = true, $fn = 96);
 	}
 	
 	translate([-radius * cos(45), offset_h, 0]) rotate([0, 0, 45]) hull() {
-        sector(radius, [0, 180]);
+        circle(radius, $fn = 96);
 		translate([-radius + tip_radius, -radius * 2 + tip_radius, 0]) 
-		    circle(tip_radius, center = true, $fn = 48);
+		    circle(tip_radius, center = true, $fn = 96);
 	}
 }
