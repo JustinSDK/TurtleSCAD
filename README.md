@@ -27,3 +27,7 @@ A simple OpenSCAD library.
 - [3D love heart generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/3d_love_heart_generator.md)
 
 ![3D love heart generator](http://thingiverse-production-new.s3.amazonaws.com/renders/7e/10/f4/8a/ec/a1b9113936b7bc01fe12c1159e527a30_preview_featured.JPG)
+
+- [Violin Bow Hook](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/violin_bow_hook.md)
+
+![Violin Bow Hook](http://thingiverse-production-new.s3.amazonaws.com/renders/01/3e/67/11/e1/83af2983c6d879904aab479ab0124a6b_preview_featured.jpg)
