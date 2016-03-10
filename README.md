@@ -31,3 +31,7 @@ A simple OpenSCAD library.
 - [Violin Bow Hook](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/violin_bow_hook.md)
 
 ![Violin Bow Hook](http://thingiverse-production-new.s3.amazonaws.com/renders/01/3e/67/11/e1/83af2983c6d879904aab479ab0124a6b_preview_featured.jpg)
+
+- [Spiral Characters](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/sprial_characters.md)
+
+![Spiral Characters](http://thingiverse-production-new.s3.amazonaws.com/renders/1c/65/89/98/d8/0c211f5d5bc318af3ea80c1db167b2ac_preview_featured.JPG)
