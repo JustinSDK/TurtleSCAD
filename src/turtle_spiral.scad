@@ -8,7 +8,7 @@ line_width = 1;
 use <2d.scad>;
 use <turtle.scad>;
     
-// Moves the turtle spirally. The turtle forwards the 'length' distance, turns 'angle' degrees, minus the length with 'step' and then continue next  spiral until the 'min_length' is reached. 
+// Moves the turtle spirally. The turtle forwards the 'length' distance, turns 'angle' degrees, minus the length with 'decreasing_step' and then continue next  spiral until the 'ending_length' is reached. 
 // Parameters: 
 //     turtle - the turtle vector [[x, y], angle].
 //     length - the beginning length.
