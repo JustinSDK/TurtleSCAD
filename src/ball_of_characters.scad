@@ -67,13 +67,12 @@ module spin_characters(turtle, length, max_length, min_length, text, index = 0, 
 	}
 }
 
-
 module spiral_characters(diameter, text, symbol) {
     inner_diameter = 30;
 	
 	beginning_length = inner_diameter / 10;
 	
-	max_length = (diameter - 2.5) / 10;
+	max_length = (diameter - 2) / 10;
 	min_length = beginning_length;
 	
 	difference() {
@@ -94,13 +93,13 @@ module spiral_characters(diameter, text, symbol) {
 						);
 				}
 			}
-			sphere((diameter - 1.5) / 2);
+			sphere((diameter - 2) / 2);
 			translate([0, 0, -(diameter / 2)])
 				linear_extrude(diameter / 2, scale = 1 / 1.5) 
 					mirror([1, 0, 0]) 
 					    text(symbol, valign = "center", halign = "center", size = inner_diameter * 1.5 / 2, font = "Times New Roman:style=Bold");
 		}
-		sphere((diameter - 1.5) / 2 - 2);
+		sphere((diameter - 2) / 2 - 2);
 	}
 }
 
