@@ -35,3 +35,7 @@ A simple OpenSCAD library.
 - [Spiral Characters](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/sprial_characters.md)
 
 ![Spiral Characters](http://thingiverse-production-new.s3.amazonaws.com/renders/1c/65/89/98/d8/0c211f5d5bc318af3ea80c1db167b2ac_preview_featured.JPG)
+
+- [Ball of Characters](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/ball_of_characters.md)
+
+![Ball of Characters](http://thingiverse-production-new.s3.amazonaws.com/renders/d0/b4/a4/de/e8/d30719bfc793de5c7e01df0657c3e075_preview_featured.jpg)
