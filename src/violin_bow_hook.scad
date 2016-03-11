@@ -5,7 +5,7 @@ number = 4; // [1:5]
 module violin_bow_hook(number) {
 	$fn = 48;
 	ratio = [0.4, 0.8, 1, 1.2, 1.6][number - 1];
-	scale(ratio) union() {
+	scale([ratio, ratio, 1]) union() {
 		violin(1);
 		linear_extrude(1) 
 			offset(1) 
