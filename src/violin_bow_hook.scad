@@ -1,4 +1,4 @@
-use <3d.scad>;
+use <polyhedrons.scad>;
 
 number = 4; // [1:5]
 				
