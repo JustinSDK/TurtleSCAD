@@ -39,3 +39,7 @@ A simple OpenSCAD library.
 - [Ball of Characters](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/ball_of_characters.md)
 
 ![Ball of Characters](http://thingiverse-production-new.s3.amazonaws.com/renders/d0/b4/a4/de/e8/d30719bfc793de5c7e01df0657c3e075_preview_featured.jpg)
+
+- [Puzzle Generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/puzzle_generator.md)
+
+![Puzzle Generator](http://thingiverse-production-new.s3.amazonaws.com/renders/cc/eb/4a/15/21/eb2304412cbe87473009958db66fb83e_preview_featured.jpg)
