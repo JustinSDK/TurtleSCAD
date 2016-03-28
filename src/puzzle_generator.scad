@@ -43,6 +43,6 @@ module puzzle(xs, ys, piece_side_length, spacing) {
 		square([piece_side_length * xs - spacing, piece_side_length * ys - spacing]);
 	}
 }
-
+ 
 linear_extrude(piece_height) 
     puzzle(xs, ys, piece_side_length, spacing);
