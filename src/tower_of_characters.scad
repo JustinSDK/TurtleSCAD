@@ -1,7 +1,7 @@
 use <2d.scad>;
 use <3d.scad>;
 
-button_symbol = ";";
+buttom_symbol = ";";
 
 characters = "I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.I TURN COFFEE INTO CODE.";
 
@@ -110,4 +110,4 @@ module tower_of_chinese_characters(symbol, characters, thickness = 1, inner_wall
 }
 
 
-tower_of_characters(button_symbol, characters, thickness, inner_wall = inner_wall);
+tower_of_characters(buttom_symbol, characters, thickness, inner_wall = inner_wall);
