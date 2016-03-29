@@ -15,3 +15,4 @@ You may change the following parameters to create your own bird house:
 - `hang_ring_radius`
 - `door_ring_radius`
 
+![Bird House](http://thingiverse-production-new.s3.amazonaws.com/renders/57/af/95/1a/75/e45283242b0bbc9b37575eba250b1c21_preview_featured.JPG)

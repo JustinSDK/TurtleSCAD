@@ -8,5 +8,4 @@ It's based on [Turtle Spiral Generator](http://www.thingiverse.com/thing:1207095
 - `symbol`
 - `spin`
 
-Give it a try:
-http://www.thingiverse.com/apps/customizer/run?thing_id=1404251
+![Spiral Characters](http://thingiverse-production-new.s3.amazonaws.com/renders/1c/65/89/98/d8/0c211f5d5bc318af3ea80c1db167b2ac_preview_featured.JPG)

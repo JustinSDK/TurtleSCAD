@@ -6,7 +6,7 @@ This generator is actually created as a base for my future designs. For example,
 
 ... to create a 3D maze heart as the following:
 
-![3D maze heart](http://thingiverse-production-new.s3.amazonaws.com/renders/31/78/af/8b/2e/924d8ba4bbc555efcf43905fc1a39219_preview_featured.jpg)
+![3D maze heart](http://thingiverse-production-new.s3.amazonaws.com/renders/bc/af/12/07/71/861c9964ae622d7e548527c868922a68_preview_featured.jpg)
 
 If you also want to create your own style of 3D love heart, try using this generator and see how it looks:
 
