@@ -12,3 +12,5 @@ A simple OpenSCAD library.
 - [Spiral Characters](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/sprial_characters.md)
 - [Ball of Characters](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/ball_of_characters.md)
 - [Puzzle Generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/puzzle_generator.md)
+- [Multiplication puzzle generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/multiplication_puzzle_generator.md)
+- [Character tower generator V1.1](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/character_tower_generator_V1.1.md)
