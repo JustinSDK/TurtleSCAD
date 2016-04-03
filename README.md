@@ -14,3 +14,4 @@ A simple OpenSCAD library.
 - [Puzzle Generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/puzzle_generator.md)
 - [Multiplication puzzle generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/multiplication_puzzle_generator.md)
 - [Character tower generator V1.1](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/character_tower_generator_V1.1.md)
+- [Image to puzzle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/image_to_puzzle.md)
