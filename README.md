@@ -16,3 +16,4 @@ A simple OpenSCAD library.
 - [Character tower generator V1.1](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/character_tower_generator_V1.1.md)
 - [Image to puzzle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/image_to_puzzle.md)
 - [Magic boxes](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic_boxes.md)
+- [caterpillar](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/caterpillar.md)
