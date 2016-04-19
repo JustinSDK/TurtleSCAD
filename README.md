@@ -17,3 +17,4 @@ A simple OpenSCAD library.
 - [Image to puzzle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/image_to_puzzle.md)
 - [Magic boxes](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic_boxes.md)
 - [caterpillar](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/caterpillar.md)
+- [Magic folding cube - a proof of concept](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic-folding-cube-a-proof-of-concept.md)
