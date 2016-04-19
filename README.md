@@ -18,3 +18,4 @@ A simple OpenSCAD library.
 - [Magic boxes](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic_boxes.md)
 - [caterpillar](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/caterpillar.md)
 - [Magic folding cube - a proof of concept](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic-folding-cube-a-proof-of-concept.md)
+- [Magic folding cube](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic-folding-cube.md)
