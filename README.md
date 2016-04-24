@@ -20,3 +20,5 @@ A simple OpenSCAD library.
 - [Magic folding cube - a proof of concept](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic-folding-cube-a-proof-of-concept.md)
 - [Magic folding cube](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic-folding-cube.md)
 - [Heart chain with text](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/heart_chain_with_text.md)
+- [Soccer polyhedron](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/soccer_polyhedron.md)
+
