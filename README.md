@@ -19,3 +19,4 @@ A simple OpenSCAD library.
 - [caterpillar](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/caterpillar.md)
 - [Magic folding cube - a proof of concept](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic-folding-cube-a-proof-of-concept.md)
 - [Magic folding cube](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/magic-folding-cube.md)
+- [Heart chain with text](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/heart_chain_with_text.md)
