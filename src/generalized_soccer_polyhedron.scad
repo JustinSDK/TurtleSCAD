@@ -6,10 +6,12 @@ spacing = 0.5;
 //     length : the side length
 //     spacing : the gap between a pentagon or a hexagon
 module generalized_pentagon(length, spacing = 0.5) {
+    r = 0.5 * length / sin(36);
+	s = (r - spacing / 2) / r;
     color("black") 
 	    rotate(18) 
 		     linear_extrude(length, scale = 1.425)
-		        offset(r = -spacing / 2) 
+				scale([s, s, s])
 				    children();
 }
 
@@ -18,9 +20,11 @@ module generalized_pentagon(length, spacing = 0.5) {
 //     length : the side length
 //     spacing : the gap between a pentagon or a hexagon
 module generalized_hexagon(length, spacing = 0.5) {
+    r = 0.5 * length / sin(30);
+	s = (r - spacing / 2) / r;
     color("white") 
 	     linear_extrude(length - length * 0.02389, scale = 1.425) 
-		    offset(r = -spacing / 2) 
+			scale([s, s, s])
 		        children();
 }
 
