@@ -30,7 +30,7 @@ module generalized_hexagon(length, spacing = 0.5) {
 		        children();
 }
 
-// two generalized pentagons and two generalized hexagons.
+// a placeholder pentagon, one generalized pentagon and two generalized hexagons.
 // Parameters:
 //     length : the side length
 //     spacing : the gap between the pentagon and hexagon

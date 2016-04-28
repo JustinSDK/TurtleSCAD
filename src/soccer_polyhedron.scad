@@ -30,7 +30,7 @@ module hexagon(length, spacing = 0.5) {
 		        circle(0.5 * length / sin(30), $fn = 6);
 }
 
-// one pentagons and two hexagons.
+// a placeholder pentagon, one pentagon and two hexagons.
 // Parameters:
 //     length : the side length
 //     spacing : the gap between the pentagon and hexagon
