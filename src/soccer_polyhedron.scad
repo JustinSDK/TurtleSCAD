@@ -30,14 +30,12 @@ module hexagon(length, spacing = 0.5) {
 		        circle(0.5 * length / sin(30), $fn = 6);
 }
 
-// two pentagons and two hexagons.
+// one pentagons and two hexagons.
 // Parameters:
 //     length : the side length
 //     spacing : the gap between the pentagon and hexagon
 module pentagon_based_sub_comp(length, spacing = 0.5) {
 	pentagon_circle_r = 0.5 * length / sin(36);
-	
-	pentagon(length, spacing);
 	
 	a = 37.325;
 	
@@ -97,7 +95,8 @@ module half_soccer_polyhedron(line_length, spacing = 0.5) {
 	pentagon_circle_r = 0.5 * line_length / sin(36);
 	offset_y = pentagon_circle_r * cos(36);
 
-	// pentagon(line_length, spacing);
+	pentagon(line_length, spacing);
+	
 	for(i = [0:4]) {
 		rotate(72 * i) 
 		    pentagon_based_sub_comp(line_length, spacing);
