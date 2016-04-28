@@ -37,8 +37,6 @@ module generalized_hexagon(length, spacing = 0.5) {
 module generalized_pentagon_based_sub_comp(length, spacing = 0.5) {
 	pentagon_circle_r = 0.5 * length / sin(36);
 	
-	children(0); 
-	
 	a = 37.325;
 	
 	offset_y = 0.5 * length * tan(54) + pentagon_circle_r * cos(a);
@@ -51,7 +49,6 @@ module generalized_pentagon_based_sub_comp(length, spacing = 0.5) {
 				children(1); 
 			}
 }
-
 
 // two generalized hexagons and one generalized pentagon.
 // Parameters:
@@ -103,6 +100,8 @@ module generalized_half_soccer_polyhedron(line_length, spacing = 0.5) {
 	pentagon_circle_r = 0.5 * line_length / sin(36);
 	offset_y = pentagon_circle_r * cos(36);
 
+	children(0);
+	
 	for(i = [0:4]) {
 		rotate(72 * i) 
 		    generalized_pentagon_based_sub_comp(line_length, spacing) {
