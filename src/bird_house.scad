@@ -1,9 +1,12 @@
 use <2d.scad>;
 
-house_radius = 50;
+house_length = 100;
 wall_thickness = 1.5;
-hang_ring_radius = 5;
+door_radius = 25;
+door_above_floor = 25;
 door_ring_radius = 4;
+hang_ring_radius = 5;
+
 
 // 2D module, composed of a semi-circle and a square. The square's length is equal to the circle radius.
 //
@@ -23,8 +26,7 @@ module bird_house_2d_contour(house_radius) {
 //     house_radius - the semi-circle radius of the house
 //     door_ring_radius - the ring radius on the door
 //     wall_thickness - the wall thicnkess.
-module bird_house_body(house_radius, door_ring_radius, wall_thickness) {
-    door_radius = house_radius / 2;
+module bird_house_body(house_radius, door_radius, door_above_floor, door_ring_radius, wall_thickness) {
     house_depth = house_radius * 2;
 	
 	difference() {
@@ -43,15 +45,15 @@ module bird_house_body(house_radius, door_ring_radius, wall_thickness) {
 				    square(house_radius * 2);
 				
 		// create a door
-		translate([0, 0, wall_thickness]) 
+		translate([0, door_radius - door_above_floor, wall_thickness]) 
 		    linear_extrude(house_depth) 
 			    circle(door_radius);
 	}    
 
 	// create the door ring
-	translate([0, 0, house_radius * 2]) 
+	translate([0, door_radius - door_above_floor, house_radius * 2]) 
 		rotate_extrude(convexity = 10) 
-			translate([house_radius / 2 + door_ring_radius, 0, 0]) 
+			translate([door_radius + door_ring_radius, 0, 0]) 
 				circle(door_ring_radius, $fn = 24);													
 }
 
@@ -104,8 +106,10 @@ module hang_ring(ring_radius, house_radius, wall_thickness) {
 //     house_radius - the semi-circle radius of the house
 //     door_ring_radius - the ring radius on the door. 
 //     wall_thickness - the wall thicnkess.
-module bird_house(house_radius, hang_ring_radius, door_ring_radius, wall_thickness) {
-     bird_house_body(house_radius, door_ring_radius, wall_thickness);
+module bird_house(house_length, door_radius, door_above_floor, hang_ring_radius, door_ring_radius, wall_thickness) {
+    house_radius = house_length / 2;
+
+    bird_house_body(house_radius, door_radius, door_above_floor, door_ring_radius, wall_thickness);
 
     length = (house_radius - 0.525 * wall_thickness) / 0.475;
 
@@ -119,4 +123,7 @@ module bird_house(house_radius, hang_ring_radius, door_ring_radius, wall_thickne
 }
 
 rotate([90, 0, 0])
-    bird_house(house_radius, hang_ring_radius, door_ring_radius, wall_thickness);
+    bird_house(house_length, door_radius, door_above_floor, hang_ring_radius, door_ring_radius, wall_thickness);
+	
+
+
