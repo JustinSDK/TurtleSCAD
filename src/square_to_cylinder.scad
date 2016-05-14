@@ -2,7 +2,11 @@ length = 300;
 width = 100;
 thickness = 2;
 fn = 48;
- 
+
+// Create a triangle which is 1/fn of a circle. 
+// Parameters:
+//     r  - the circle radius 
+//     fn - the same meaning as the $fn of OpenSCAD
 module one_over_fn_for_circle(r, fn) {
     a = 360 / fn;
 	x = r * cos(a / 2);
@@ -10,8 +14,12 @@ module one_over_fn_for_circle(r, fn) {
 	polygon(points=[[0, 0], [x, y],[x, -y]]);
 }
 
-
-
+// Transform a model inito a cylinder.
+// Parameters:
+//     length - the model's length 
+//     width  - the model's width
+//     square_thickness - the model's thickness
+//     fn - the same meaning as the $fn of OpenSCAD
 module square_to_cylinder(length, width, square_thickness, fn) {
     r = length / 6.28318;
     a = 360 / fn;
