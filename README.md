@@ -26,4 +26,5 @@ A simple OpenSCAD library.
 - [Character puzzle soccer](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/character_puzzle_soccer.md)
 - [Zentangle bracelet](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/zentangle_bracelet.md)
 - [Generalized zentangle bracelet](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/generalized_zentangle_bracelet.md)
+- [Music sheet bracelet](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/music_sheet_bracelet.md)
 
