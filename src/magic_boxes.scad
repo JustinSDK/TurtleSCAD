@@ -69,18 +69,21 @@ module magic_boxes(boxes, box_data, joint_data, spacing) {
 	
     if((boxes_x + boxes_y) == 3) {
 	    magic_box_2x1(
-		    [box_width, box_height, box_thickness], 
+		    box_data, 
 			[joint_radius, joint_width], 
 			0.5
 		);
 	} else {
+	    box_width = box_data[0];
+	    box_height = box_data[1];
+	    box_thickness = box_data[2];
 	    // boxes
 		for(x = [0 : boxes_x - 1]) {
 			bj_step = (spacing + joint_radius) * 2 + box_width;
 			
 			for(y = [0 : boxes_y - 1]) {
 				translate([x * bj_step, y * bj_step, 0]) 
-					box(box_width, box_height, spacing);
+					box(box_width, box_height, box_thickness);
 			}
 		}
 
