@@ -8,7 +8,7 @@ spacing = 0.5;
 module generalized_pentagon(length, spacing = 0.5) {
     r = 0.5 * length / sin(36);
 	s = (r - spacing / 2) / r;
-
+	
     color("black") 
 	    rotate(18) 		     
 		     linear_extrude(length, scale = 1.42215)

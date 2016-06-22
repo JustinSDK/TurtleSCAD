@@ -29,3 +29,4 @@ A simple OpenSCAD library.
 - [Music sheet bracelet](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/music_sheet_bracelet.md)
 - [Png to pen holder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/png_to_pen_holder.md)
 - [Png to twisted vase](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/png_to_twisted_vase.md)
+- [Chess set? Puzzle? Soccer? V1.1](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/chess_puzzle_soccerV1.1.md)
