@@ -1,4 +1,5 @@
 # Chess set? Puzzle? Soccer? V1.1
+
 Someone told me that [Soccer puzzle](https://www.thingiverse.com/thing:1534279) may be printed more easily if each piece has a flat bottom. That give me an idea. I can give the pieces of [Chess set? Puzzle? Soccer?](https://www.thingiverse.com/thing:1547895) a flat bottom and make them higher. They would be more like chess pieces. 
 
 You may still put all of the pieces together as a soccer if you don't want to play chess. 
