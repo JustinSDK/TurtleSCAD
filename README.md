@@ -30,3 +30,4 @@ A simple OpenSCAD library.
 - [Png to pen holder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/png_to_pen_holder.md)
 - [Png to twisted vase](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/png_to_twisted_vase.md)
 - [Chess set? Puzzle? Soccer? V1.1](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/chess_puzzle_soccerV1.1.md)
+- [Text pendant](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_pendant.md)
