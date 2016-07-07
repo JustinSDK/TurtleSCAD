@@ -33,3 +33,4 @@ A simple OpenSCAD library.
 - [PI shere](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/pi_sphere.md)
 - [Text pendant](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_pendant.md)
 - [Text sphere](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_sphere.md)
+- [Text cup](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_cup.md)
