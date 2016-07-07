@@ -32,3 +32,4 @@ A simple OpenSCAD library.
 - [Chess set? Puzzle? Soccer? V1.1](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/chess_puzzle_soccerV1.1.md)
 - [PI shere](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/pi_sphere.md)
 - [Text pendant](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_pendant.md)
+- [Text sphere](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_sphere.md)
