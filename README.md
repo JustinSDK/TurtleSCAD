@@ -35,4 +35,5 @@ A simple OpenSCAD library.
 - [Text sphere](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_sphere.md)
 - [Text cup](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_cup.md)
 - [Spinning picture ornament](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spinning_picture_ornament.md)
+- [Yet another gyro](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/gyro.md)
 
