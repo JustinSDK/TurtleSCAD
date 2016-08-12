@@ -37,4 +37,5 @@ A simple OpenSCAD library.
 - [Spinning picture ornament](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spinning_picture_ornament.md)
 - [Yet another gyro](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/gyro.md)
 - [Plastic bottle jewelry holder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/plastic_bottle_jewelry_holder.md)
+- [Moving fish](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/moving_fish.md)
 
