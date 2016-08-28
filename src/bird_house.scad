@@ -1,12 +1,12 @@
 use <2d.scad>;
 
-house_length = 100;
+house_length = 150;
 wall_thickness = 1.5;
-door_radius = 25;
-door_above_floor = 25;
+door_radius = 27.5;
+door_above_floor = 30;
 door_ring_radius = 4;
 hang_ring_radius = 5;
-
+air_holes = "YES"; // [YES, NO]
 
 // 2D module, composed of a semi-circle and a square. The square's length is equal to the circle radius.
 //
@@ -122,8 +122,25 @@ module bird_house(house_length, door_radius, door_above_floor, hang_ring_radius,
 	    hang_ring(hang_ring_radius, house_radius, wall_thickness);			
 }
 
-rotate([90, 0, 0])
-    bird_house(house_length, door_radius, door_above_floor, hang_ring_radius, door_ring_radius, wall_thickness);
+difference() {
+	rotate([90, 0, 0])
+		bird_house(house_length, door_radius, door_above_floor, hang_ring_radius, door_ring_radius, wall_thickness);
+
+		
+	if(air_holes == "YES") {
+		// air holes	
+		union() {
+			translate([0, 0, -house_length / 3]) sphere(door_radius * 0.25);
+			translate([house_length / 3, 0, -house_length / 3]) sphere(door_radius * 0.25);
+			translate([-house_length / 3, 0, -house_length / 3]) sphere(door_radius * 0.25);
+
+			translate([0, -house_length, -house_length / 2.5]) sphere(door_radius * 0.25);
+			translate([house_length / 3, -house_length, -house_length / 3]) sphere(door_radius * 0.25);
+			translate([-house_length / 3, -house_length, -house_length / 3]) sphere(door_radius * 0.25);
+		}
+	}
+}
+
 	
 
 
