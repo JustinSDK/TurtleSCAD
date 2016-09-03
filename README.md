@@ -44,3 +44,5 @@ A simple OpenSCAD library.
 - [SD card holder fish](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/sd_card_holder_fish.md)
 - [SD/USB holder fish](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/sd_usb_holder_fish.md)
 - [SD/USB holder fish](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/cat_corner_protector.md)
+- [Lotus-like flower](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/lotus_like_flower.md)
+
