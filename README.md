@@ -45,4 +45,5 @@ A simple OpenSCAD library.
 - [SD/USB holder fish](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/sd_usb_holder_fish.md)
 - [Cat corner protector](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/cat_corner_protector.md)
 - [Lotus-like flower](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/lotus_like_flower.md)
+- [Golden spiral generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/golden_spiral_generator.md)
 
