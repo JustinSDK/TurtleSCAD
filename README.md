@@ -47,4 +47,4 @@ A simple OpenSCAD library.
 - [Lotus-like flower](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/lotus_like_flower.md)
 - [Golden spiral generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/golden_spiral_generator.md)
 - [Spiral moving fish](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spiral_moving_fish.md)
-
+- [Archimedean spiral generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/archimedean_spiral_generator.md)
