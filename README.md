@@ -48,3 +48,5 @@ A simple OpenSCAD library.
 - [Golden spiral generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/golden_spiral_generator.md)
 - [Spiral moving fish](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spiral_moving_fish.md)
 - [Archimedean spiral generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/archimedean_spiral_generator.md)
+- [Text heart chain](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_heart_chain.md)
+
