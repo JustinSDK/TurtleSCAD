@@ -33,15 +33,15 @@ module line(point1, point2, width = 1, cap_round = true) {
 // Parameters: 
 //     points - the coordinates of the polyline segments.
 //     width  - the line width.
-module polyline(points, width = 1, index = 0) {
-    if(index < len(points)) {
-        if(index == 0) {
-            polyline(points, width, index + 1);
-        } else {
-            line(points[index - 1], points[index], width);
-            polyline(points, width, index + 1);
-        }
-    }
+module polyline(points, width = 1) {
+	module polyline_inner(points, width, index) {
+		if(index < len(points)) {
+			line(points[index - 1], points[index], width);
+			polyline_inner(points, width, index + 1);
+		}
+	}
+	
+	polyline_inner(points, width, 1);
 }
 
 // Creates a polyline, defined by the vector of the segment points. 
