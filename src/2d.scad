@@ -83,24 +83,12 @@ module a_quarter_arc(radius, angle, width = 1) {
 //     radius - the arc radius 
 //     angles - the arc angles 
 //     width - the arc width
-module arc(radius, angles, width = 1) {
-    angle_from = angles[0];
-    angle_to = angles[1];
-    angle_difference = angle_to - angle_from;
-    outer = radius + width;
-    rotate(angle_from)
-        if(angle_difference <= 90) {
-            a_quarter_arc(radius, angle_difference, width);
-        } else if(angle_difference > 90 && angle_difference <= 180) {
-            arc(radius, [0, 90], width);
-            rotate(90) a_quarter_arc(radius, angle_difference - 90, width);
-        } else if(angle_difference > 180 && angle_difference <= 270) {
-            arc(radius, [0, 180], width);
-            rotate(180) a_quarter_arc(radius, angle_difference - 180, width);
-        } else if(angle_difference > 270 && angle_difference <= 360) {
-            arc(radius, [0, 270], width);
-            rotate(270) a_quarter_arc(radius, angle_difference - 270, width);
-       }
+//     fn - the same as $fn of circle module
+module arc(radius, angles, width = 1, fn = 24) {
+    difference() {
+		sector(radius + width, angles, fn);
+		sector(radius, angles, fn);
+	}
 }
 
 // Given a `radius` and `angle`, draw a sector from zero degree to `angle` degree. The `angle` ranges from 0 to 90.
@@ -119,25 +107,20 @@ module a_quarter_sector(radius, angle) {
 // Parameters: 
 //     radius - the sector radius
 //     angles - the sector angles
-module sector(radius, angles) {
-    angle_from = angles[0];
-    angle_to = angles[1];
-    angle_difference = angle_to - angle_from;
+//     fn - the same as $fn of circle module
+module sector(radius, angles, fn = 24) {
+    d = radius - radius * cos(180 / fn);
+	r = (radius + d) / cos(180 / fn);
 
-    rotate(angle_from)
-        if(angle_difference <= 90) {
-            a_quarter_sector(radius, angle_difference);
-        } else if(angle_difference > 90 && angle_difference <= 180) {
-            sector(radius, [0, 90]);
-            rotate(90) a_quarter_sector(radius, angle_difference - 90);
-        } else if(angle_difference > 180 && angle_difference <= 270) {
-            sector(radius, [0, 180]);
-            rotate(180) a_quarter_sector(radius, angle_difference - 180);
-        } else if(angle_difference > 270 && angle_difference <= 360) {
-            sector(radius, [0, 270]);
-            rotate(270) a_quarter_sector(radius, angle_difference - 270);
-       }
+	difference() {
+	    circle(radius, $fn = fn);
+		points = [for(a = [angles[0] : -360 / fn : angles[1] - 360]) 
+		    [r * cos(a), r * sin(a)]
+		];
+		polygon(concat([[0, 0]], points));
+	}
 }
+
 
 // The heart is composed of two semi-circles and two isosceles trias. 
 // The tria's two equal sides have length equals to the double `radius` of the circle.
