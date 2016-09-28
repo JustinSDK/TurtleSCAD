@@ -109,8 +109,7 @@ module a_quarter_sector(radius, angle) {
 //     angles - the sector angles
 //     fn - the same as $fn of circle module
 module sector(radius, angles, fn = 24) {
-    d = radius - radius * cos(180 / fn);
-	r = (radius + d) / cos(180 / fn);
+	r = radius / cos(180 / fn);
 	step = -360 / fn;
 
 	points = concat([[0, 0]],
