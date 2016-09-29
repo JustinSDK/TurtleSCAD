@@ -44,22 +44,6 @@ module polyline(points, width = 1) {
 	polyline_inner(points, width, 1);
 }
 
-// Creates a polyline, defined by the vector of the segment points. 
-//
-// Parameters: 
-//     points - the coordinates of the polyline segments.
-//     width  - the line width.
-module polyline(points, width = 1, index = 0) {
-    if(index < len(points)) {
-        if(index == 0) {
-            polyline(points, width, index + 1);
-        } else {
-            line(points[index - 1], points[index], width);
-            polyline(points, width, index + 1);
-        }
-    }
-}
-
 function PI() = 3.14159;
 
 // Given a `radius` and `angle`, draw an arc from zero degree to `angle` degree. The `angle` ranges from 0 to 90.
