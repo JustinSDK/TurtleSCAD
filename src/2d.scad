@@ -34,14 +34,14 @@ module line(point1, point2, width = 1, cap_round = true) {
 //     points - the coordinates of the polyline segments.
 //     width  - the line width.
 module polyline(points, width = 1) {
-	module polyline_inner(points, width, index) {
+	module polyline_inner(points, index) {
 		if(index < len(points)) {
 			line(points[index - 1], points[index], width);
-			polyline_inner(points, width, index + 1);
+			polyline_inner(points, index + 1);
 		}
 	}
 	
-	polyline_inner(points, width, 1);
+	polyline_inner(points, 1);
 }
 
 function PI() = 3.14159;
