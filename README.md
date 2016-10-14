@@ -50,3 +50,4 @@ A simple OpenSCAD library.
 - [Archimedean spiral generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/archimedean_spiral_generator.md)
 - [Text heart chain](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_heart_chain.md)
 - [Forest generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/forest-generator.md)
+- [Spider web generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spider_web_generator.md)
