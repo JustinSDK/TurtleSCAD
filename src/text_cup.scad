@@ -1,10 +1,10 @@
-characters = "Pi=3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803362534211706798213608651328230664709384460955058223172535940812836111745028410270193852110555964462293695493038196442881097566593344612847563623378678316527120190914563656692346033661045432663621339360726024"; 
-
+characters = "3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803362534211706798213608651328230664709384460955058223172535940812836111745028410270193852110555964462293695493038196442881097566593344612847563623378678316527120190914563656692346033661045432663621339360726024"; 
 top_radius = 50; 
 bottom_radius = 40;
 height = 100;
 thickness = 3; 
 inverted = "NO"; // [YES,NO]
+handler = "YES"; // [YES, NO]
 
 module a_quarter_sector(radius, angle, width = 1) {
     outer = radius + width;
@@ -44,7 +44,7 @@ module spiral_characters(radius, characters, thickness = 1) {
 }
 
 
-module cup(characters, top_radius, bottom_radius, height, total_thickness) {
+module cup(characters, top_radius, bottom_radius, height, total_thickness, inverted, handler) {
     $fn = 36;
 	
     thickness = total_thickness / 2;
@@ -116,9 +116,11 @@ module cup(characters, top_radius, bottom_radius, height, total_thickness) {
 
 
 	body_with_text();
-	handler();
+	if(handler == "YES") {
+	    handler();
+	}
 	bottom();
 }
 
 
-cup(characters, top_radius, bottom_radius, height, thickness);
+cup(characters, top_radius, bottom_radius, height, thickness, inverted, handler);
