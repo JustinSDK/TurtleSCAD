@@ -51,3 +51,4 @@ A simple OpenSCAD library.
 - [Text heart chain](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_heart_chain.md)
 - [Forest generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/forest-generator.md)
 - [Spider web generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spider_web_generator.md)
+- [Color pen holder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/colour_pen_holder.md)
