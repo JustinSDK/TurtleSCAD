@@ -53,4 +53,6 @@ A simple OpenSCAD library.
 - [Spider web generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spider_web_generator.md)
 - [Color pen holder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/colour_pen_holder.md)
 - [Tableware organizer](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/tableware_organizer.md)
+- [Cutting board & knife rack](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/cutting_board_knife_rack.md)
+
 
