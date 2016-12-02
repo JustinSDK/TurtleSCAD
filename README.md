@@ -55,5 +55,9 @@ A simple OpenSCAD library.
 - [Tableware organizer](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/tableware_organizer.md)
 - [Cutting board & knife rack](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/cutting_board_knife_rack.md)
 - [Fern leaf stencil](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/fern_leaf_stencil.md)
+- [Customizable coffee stencil](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/customizable_coffee_stencil.md)
+
+
+
 
 
