@@ -57,7 +57,7 @@ A simple OpenSCAD library.
 - [Fern leaf stencil](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/fern_leaf_stencil.md)
 - [Customizable coffee stencil](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/customizable_coffee_stencil.md)
 - [Customizable bezier vase](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/bezier_vase.md)
-
+- [Bezier vase II](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/bezier_vase_II.md)
 
 
 
