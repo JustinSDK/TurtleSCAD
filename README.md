@@ -61,4 +61,4 @@ A simple OpenSCAD library.
 - [Customizable tree curve](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/customizable_tree_curve.md)
 - [Song from π](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/song_from_pi.md)
 - [4 char idioms - stereographic projection](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/chinese_4_char_idioms.md)
-
+- [Customizable stereographic projection](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/stereographic_projection.md)
