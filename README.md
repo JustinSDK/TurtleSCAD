@@ -1,3 +1,6 @@
+- *[OpenSCAD Documentation - Traditional Chinese](http://openhome.cc/Gossip/OpenSCAD/)*
+- *[OpenSCAD Documentation - English](http://openhome.cc/eGossip/OpenSCAD/)*
+
 # TurtleSCAD
 
 A simple OpenSCAD library.
