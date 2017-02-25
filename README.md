@@ -1,5 +1,5 @@
-- *[OpenSCAD Documentation - Traditional Chinese](http://openhome.cc/Gossip/OpenSCAD/)*
-- *[OpenSCAD Documentation - English](http://openhome.cc/eGossip/OpenSCAD/)*
+- *[OpenSCAD Documentation - Traditional Chinese](https://openhome.cc/Gossip/OpenSCAD/)*
+- *[OpenSCAD Documentation - English](https://openhome.cc/eGossip/OpenSCAD/)*
 
 # TurtleSCAD
 
