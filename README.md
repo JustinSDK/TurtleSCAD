@@ -66,3 +66,4 @@ A simple OpenSCAD library.
 - [4 char idioms - stereographic projection](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/chinese_4_char_idioms.md)
 - [Customizable stereographic projection](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/stereographic_projection.md)
 - [Dancing cubes](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dancing_cubes.md)
+- [Dancing cubes ||](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dancing_cubes_2.md)
