@@ -68,3 +68,4 @@ A simple OpenSCAD library.
 - [Dancing cubes](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dancing_cubes.md)
 - [Dancing cubes ||](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dancing_cubes_2.md)
 - [Hinged triangle to square transformation](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/hinged_triangle_to_square.md)
+- [Hinged triangle to square transformation ||](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/hinged_triangle_to_square2.md)
