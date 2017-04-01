@@ -3,7 +3,7 @@
 
 # TurtleSCAD
 
-A simple OpenSCAD library.
+My 3D things.
 
 - [Turtle spiral generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/turtle_spiral.md)
 - [Symmetrical triangle generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/symmetrical_triangle_generator.md)
