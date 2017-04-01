@@ -13,6 +13,18 @@ cap_style = "CAP_CIRCLE"; // [CAP_BUTT, CAP_CIRCLE, CAP_SPHERE]
 angle_offset = 5;
 layer_offset = 1.2;
 
+/**
+* line3d.scad
+*
+* Creates a 3D line from two points. 
+* 
+* @copyright Justin Lin, 2017
+* @license https://opensource.org/licenses/lgpl-3.0.html
+*
+* @see https://openhome.cc/eGossip/OpenSCAD/lib-line3d.html
+*
+**/
+
 module line3d(p1, p2, thickness, p1Style = "CAP_CIRCLE", p2Style = "CAP_CIRCLE") {
     r = thickness / 2;
 
