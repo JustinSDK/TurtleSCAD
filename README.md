@@ -72,4 +72,4 @@ My 3D things.
 - [PNG to StereoProjection](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/png_to_stereoprojection.md)
 - [Text box](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_box.md)
 - [Stick Tower](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/stick_tower.md)
-
+- [Graph Generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/Graph.md)
