@@ -74,3 +74,4 @@ My 3D things.
 - [Stick Tower](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/stick_tower.md)
 - [Graph Generator](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/Graph.md)
 - [Twist bottle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/twist_bottle.md)
+- [Spiral cube](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spiral_cube.md)
