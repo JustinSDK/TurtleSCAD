@@ -78,3 +78,4 @@ My 3D things.
 - [CYL bear box](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/CYL_bear_box.md)
 - [Twisted band](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/twisted_band.md)
 - [Toy spring](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/toy_spring.md)
+- [Torus knot](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/torus_knot.md)
