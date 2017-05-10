@@ -77,3 +77,4 @@ My 3D things.
 - [Spiral cube](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spiral_cube.md)
 - [CYL bear box](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/CYL_bear_box.md)
 - [Twisted band](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/twisted_band.md)
+- [Toy spring](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/toy_spring.md)
