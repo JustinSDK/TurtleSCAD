@@ -10,21 +10,6 @@ star_radius = 0.5;
 function __to2d(p) = [p[0], p[1]];
 
 function __to3d(p) = [p[0], p[1], 0];
-
-function __triangles_radial(shape_pts) = [for(i = [1:len(shape_pts) - 2]) [0, i, i + 1]];
-
-function __triangles_tape(shape_pts) =
-    let(leng = len(shape_pts))
-    concat(
-        [
-            for(i = [0:leng / 2 - 2]) 
-                [i, leng - i - 1, leng - i - 2]
-        ],
-        [
-            for(i = [0:leng / 2 - 2])
-                [i, i + 1, leng - i - 2]
-        ]
-    );
     
 function __is_vector(value) = !(value >= "") && len(value) != undef; 
 
@@ -97,68 +82,106 @@ function rotate_p(point, a) =
 *
 **/
 
-module polysections(sections, triangles = "RADIAL") {
-    module tri_sections(tri1, tri2) {
-        polyhedron(
-            points = concat(tri1, tri2),
-            faces = [
-                [0, 1, 2], 
-                [3, 4, 5], 
-                [0, 1, 4], [1, 2, 5], [2, 0, 3], 
-                [0, 3, 4], [1, 4, 5], [2, 5, 3]
-            ]
-        );  
+module polysections(sections, triangles = "SOLID") {
+    module solid_sections() {
+        leng_sections = len(sections);
+        leng_pts_section = len(sections[0]);
+        
+        side_idxes = [
+                for(j = [0:leng_pts_section:(leng_sections - 2) * leng_pts_section])
+                    for(i = [0:leng_pts_section - 1]) 
+                        [
+                            j + i, 
+                            j + (i + 1) % leng_pts_section, 
+                            j + (i + 1) % leng_pts_section + leng_pts_section , 
+                            j + i + leng_pts_section
+                        ]
+             ];
+
+        first_idxes = [for(i = [0:leng_pts_section - 1]) i];   
+        
+        last_idxes = [
+            for(i = [0:leng_pts_section - 1]) 
+                i + leng_pts_section * (leng_sections - 1)
+        ];    
+        
+        v_pts = [
+            for(section = sections) 
+                for(pt = section) 
+                    pt
+        ];
+        
+       polyhedron(
+           v_pts, 
+           concat([first_idxes], side_idxes, [last_idxes])
+       );    
     }
     
-    function flat(vector, i = 0) =
-        i == len(vector) ? [] :
-        concat(vector[i], flat(vector, i + 1));    
-    
-    function hollow_tris() = 
-        let(
-            leng_section = len(sections[0]),
-            inner_i_begin = leng_section / 2,
-            pair_idxes = [for(i = [0:inner_i_begin - 1])
-                let(n = inner_i_begin + i + 1)
-                [
-                    [i, inner_i_begin + i, n % inner_i_begin + inner_i_begin], 
-                    [i, i + 1, n % leng_section]
+    module triangles_defined_sections() {
+        module tri_sections(tri1, tri2) {
+            polyhedron(
+                points = concat(tri1, tri2),
+                faces = [
+                    [0, 1, 2], 
+                    [3, 4, 5], 
+                    [0, 1, 4], [1, 2, 5], [2, 0, 3], 
+                    [0, 3, 4], [1, 4, 5], [2, 5, 3]
                 ]
-                
-            ]
-           
-        ) flat(pair_idxes); 
+            );  
+        }
+        
+        function hollow_tris() = 
+            let(
+                leng_section = len(sections[0]),
+                inner_i_begin = leng_section / 2,
+                idxes = concat(
+                    [
+                        for(i = [0:inner_i_begin - 1]) 
+                            let(n = inner_i_begin + i + 1)
+                            [i, inner_i_begin + i, n % inner_i_begin + inner_i_begin]
+                    ],
+                    [
+                        for(i = [0:inner_i_begin - 1]) 
+                            let(n = inner_i_begin + i + 1)
+                            [i, i + 1, n % leng_section]
+                    ]
+                )
+            ) idxes; 
 
-    function tris() = triangles == "RADIAL" ? __triangles_radial(sections[0]) : 
-        (
-            triangles == "HOLLOW" ? hollow_tris() : (
-                triangles == "TAPE" ? __triangles_tape(sections[0]) : triangles 
-            )
-        );
+        function tris() =
+            triangles == "HOLLOW" ? hollow_tris() : triangles;
 
-    module two_sections(section1, section2) {
-        for(idx = tris()) {
-            // hull is for preventing from WARNING: Object may not be a valid 2-manifold
-            hull() tri_sections(
-                [
-                    section1[idx[0]], 
-                    section1[idx[1]], 
-                    section1[idx[2]]
-                ], 
-                [
-                    section2[idx[0]], 
-                    section2[idx[1]], 
-                    section2[idx[2]]
-                ]
-            );
+        module two_sections(section1, section2) {
+            for(idx = tris()) {
+                // hull is for preventing from WARNING: Object may not be a valid 2-manifold
+                hull() tri_sections(
+                    [
+                        section1[idx[0]], 
+                        section1[idx[1]], 
+                        section1[idx[2]]
+                    ], 
+                    [
+                        section2[idx[0]], 
+                        section2[idx[1]], 
+                        section2[idx[2]]
+                    ]
+                );
+            }
+        }
+        
+        for(i = [0:len(sections) - 2]) {
+             two_sections(
+                 sections[i], 
+                 sections[i + 1]
+             );
         }
     }
     
-    for(i = [0:len(sections) - 2]) {
-         two_sections(
-             sections[i], 
-             sections[i + 1]
-         );
+    //
+    if(triangles == "SOLID") {
+        solid_sections();
+    } else {
+        triangles_defined_sections();
     }
 }
 
@@ -202,7 +225,7 @@ function cross_sections(shape_pts, path_pts, angles, twist = 0, scale = 1.0) =
 /**
 * shape_pentagram.scad
 *
-* Returns shape points and triangle indexes of a pentagram.
+* Returns shape points of a pentagram.
 * They can be used with xxx_extrude modules of dotSCAD.
 * The shape points can be also used with the built-in polygon module. 
 * 
@@ -215,26 +238,12 @@ function cross_sections(shape_pts, path_pts, angles, twist = 0, scale = 1.0) =
 
 function shape_pentagram(r) =
     [
-        // shape points
-        [
-            [0, 1], [-0.224514, 0.309017], 
-            [-0.951057, 0.309017], [-0.363271, -0.118034], 
-            [-0.587785, -0.809017], [0, -0.381966], 
-            [0.587785, -0.809017], [0.363271, -0.118034], 
-            [0.951057, 0.309017], [0.224514, 0.309017]
-        ] * r,
-        // triangles
-        [   
-            [0, 1, 9],
-            [2, 3, 1],
-            [4, 5, 3],
-            [6, 7, 5],
-            [8, 9, 7],
-            [1, 3, 5],
-            [1, 5, 7],
-            [1, 7, 9]
-        ]
-    ];
+        [0, 1], [-0.224514, 0.309017], 
+        [-0.951057, 0.309017], [-0.363271, -0.118034], 
+        [-0.587785, -0.809017], [0, -0.381966], 
+        [0.587785, -0.809017], [0.363271, -0.118034], 
+        [0.951057, 0.309017], [0.224514, 0.309017]
+    ] * r;
     
 /**
 * path_extrude.scad
@@ -251,7 +260,7 @@ function shape_pentagram(r) =
 *
 **/
 
-module path_extrude(shape_pts, path_pts, triangles = "RADIAL", twist = 0, scale = 1.0, closed = false) {
+module path_extrude(shape_pts, path_pts, triangles = "SOLID", twist = 0, scale = 1.0, closed = false) {
     sh_pts = len(shape_pts[0]) == 3 ? shape_pts : [for(p = shape_pts) __to3d(p)];
 
     len_path_pts = len(path_pts);    
@@ -333,12 +342,11 @@ module torus_knot(p, q, phi_step, star_radius) {
         [x, y, z]
     ];
 
-    shape_pentagram_pts_tris = shape_pentagram(star_radius);
+    shape_pentagram_pts = shape_pentagram(star_radius);
 
     path_extrude(
-        shape_pentagram_pts_tris[0], 
+        shape_pentagram_pts, 
         concat(pts, [pts[0]]), 
-        shape_pentagram_pts_tris[1], 
         closed = true
     );
 }
