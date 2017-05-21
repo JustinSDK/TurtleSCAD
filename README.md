@@ -79,3 +79,4 @@ My 3D things.
 - [Twisted band](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/twisted_band.md)
 - [Toy spring](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/toy_spring.md)
 - [Torus knot](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/torus_knot.md)
+- [GoldenTaiwan](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/GoldenTaiwan.md)
