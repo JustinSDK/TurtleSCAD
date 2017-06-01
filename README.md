@@ -81,3 +81,4 @@ My 3D things.
 - [Torus knot](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/torus_knot.md)
 - [GoldenTaiwan](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/GoldenTaiwan.md)
 - [Dragon](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dragon-prototype.md)
+- [Face](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/face-prototype.md)
