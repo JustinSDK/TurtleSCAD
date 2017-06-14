@@ -82,3 +82,5 @@ My 3D things.
 - [GoldenTaiwan](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/GoldenTaiwan.md)
 - [Dragon](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dragon-prototype.md)
 - [Face](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/face-prototype.md)
+- [Text helix](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_helix.md)
+
