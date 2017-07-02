@@ -84,3 +84,4 @@ My 3D things.
 - [Face](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/face-prototype.md)
 - [Text helix](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_helix.md)
 - [Slinky dog](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/slinky_dog.md)
+- [Slinky dog ||](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/slinky_dog2.md)
