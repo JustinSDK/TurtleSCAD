@@ -85,3 +85,4 @@ My 3D things.
 - [Text helix](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/text_helix.md)
 - [Slinky dog](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/slinky_dog.md)
 - [Slinky dog ||](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/slinky_dog2.md)
+- [Customizable text container](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/customizable_text_container.md)
