@@ -86,3 +86,5 @@ My 3D things.
 - [Slinky dog](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/slinky_dog.md)
 - [Slinky dog ||](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/slinky_dog2.md)
 - [Customizable text container](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/customizable_text_container.md)
+- [Formula: spring_festival](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/formula_spring_festival.md)
+
