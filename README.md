@@ -88,6 +88,8 @@ My 3D things.
 - [Customizable text container](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/customizable_text_container.md)
 - [Formula: spring_festival](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/formula_spring_festival.md)
 - [Vampire holder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/vampire_holder.md)
+- [String tetrahedron](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/string_tetrahedron.md)
+
 
 
 
