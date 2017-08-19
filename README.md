@@ -89,8 +89,6 @@ My 3D things.
 - [Formula: spring_festival](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/formula_spring_festival.md)
 - [Vampire holder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/vampire_holder.md)
 - [String tetrahedron](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/string_tetrahedron.md)
-
-
-
+- [QR Coder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/QR_Coder.md)
 
 
