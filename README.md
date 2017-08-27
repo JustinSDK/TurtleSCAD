@@ -90,5 +90,5 @@ My 3D things.
 - [Vampire holder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/vampire_holder.md)
 - [String tetrahedron](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/string_tetrahedron.md)
 - [QR Coder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/QR_Coder.md)
-
+- [Maze cylinder 2](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/maze_cylinder_2.md)
 
