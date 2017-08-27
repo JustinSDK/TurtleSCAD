@@ -94,9 +94,16 @@ module QR_Coder() {
     
     module head() {
         difference() {
-            scale([1.3, 1.3, 1.3]) 
-                linear_extrude(org_qr_size_with_border) 
-                    square(org_qr_size_with_border, center = true);
+            union() {
+                color("black")
+                scale([1.3, 1.3, 1.3]) 
+                    scale([1, 1, org_qr_size_with_border + 1.5]) 
+                        translate([-half_org_qr_size, -half_org_qr_size, 0])
+                            QR_code(String, Encoding, Min_Error_Correction_level, Fixed_size, Mask);        
+                scale([1.3, 1.3, 1.3]) 
+                    linear_extrude(org_qr_size_with_border) 
+                        square(org_qr_size_with_border, center = true);
+            }
                 
             translate([0, -org_qr_size_with_border * 1.3 / 2, head_size / 2])
                 rotate([-90, 0, 0]) 
@@ -174,11 +181,7 @@ module QR_Coder() {
 
     // code from https://www.thingiverse.com/thing:258542
     
-    color("black")
-    scale([1.3, 1.3, 1.3]) 
-        scale([1, 1, org_qr_size_with_border + 1.5]) 
-            translate([-half_org_qr_size, -half_org_qr_size, 0])
-                QR_code(String, Encoding, Min_Error_Correction_level, Fixed_size, Mask);
+
 
     module QR_code(string, encoding, min_ec, fs, mask) {
         version = version(string, encoding, ec_to_int(min_ec));
