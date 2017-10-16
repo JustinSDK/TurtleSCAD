@@ -91,4 +91,4 @@ My 3D things.
 - [String tetrahedron](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/string_tetrahedron.md)
 - [QR Coder](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/QR_Coder.md)
 - [Maze cylinder 2](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/maze_cylinder_2.md)
-
+- [Multiplication puzzle V2](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/multiplication_puzzle_generatorV2.md)
