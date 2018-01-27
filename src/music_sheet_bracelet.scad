@@ -1,6 +1,4 @@
-use <square_to_cylinder.scad>;
-
-mode = "Bracelet"; // [Prview, Bracelet]
+mode = "Bracelet"; // [Preview, Bracelet]
 radius = 25;
 show_clef = "violin"; // [no,alt,bass,violin]
 notestring="4:br,4:g1,4:c2,4:d2,bar,2:e2,2:e2,bar,4:br,4:e2,#:d2,4:d2,4:e2,bar,2:c2,2:c2";
@@ -15,6 +13,39 @@ if(mode == "Bracelet") {
 		music_sheet(show_clef, notestring, line_width, height / 10, 6.28318 * radius - height / 100 - 2, thickness);
 } else {
     music_sheet(show_clef, notestring, line_width, height / 10, 6.28318 * radius - height / 100 - 2, thickness);
+}
+
+// Create a triangle which is 1/fn of a circle. 
+// Parameters:
+//     r  - the circle radius 
+//     fn - the same meaning as the $fn of OpenSCAD
+module one_over_fn_for_circle(r, fn) {
+    a = 360 / fn;
+	x = r * cos(a / 2);
+	y = r * sin(a / 2);
+	polygon(points=[[0, 0], [x, y],[x, -y]]);
+}
+
+// Transform a model inito a cylinder.
+// Parameters:
+//     length - the model's length 
+//     width  - the model's width
+//     square_thickness - the model's thickness
+//     fn - the same meaning as the $fn of OpenSCAD
+module square_to_cylinder(length, width, square_thickness, fn) {
+    r = length / 6.28318;
+    a = 360 / fn;
+	y = r * sin(a / 2);
+	for(i = [0 : fn - 1]) {
+	    rotate(a * i) translate([0, -(2 * y * i + y), 0]) intersection() {
+		    translate([0, 2 * y * i + y, 0]) 
+		        linear_extrude(width) 
+				    one_over_fn_for_circle(r, fn);
+			translate([r - square_thickness, 0, width]) 
+	            rotate([0, 90, 0]) 
+	                children(0);
+		}
+	}
 }
 
 // The following code is refactored from https://www.thingiverse.com/thing:47677
