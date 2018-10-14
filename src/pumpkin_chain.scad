@@ -129,7 +129,7 @@ module pumpkin(h_radius, thickness) {
        linear_extrude(thickness) translate([0, h_radius / 4, 0]) 
              scale([1, 0.9, 1]) circle(h_radius);
              
-       translate([0, thickness / 2, 0]) linear_extrude(thickness * 2) union() {   
+       linear_extrude(thickness * 2) union() {   
            eye();
            mirror([1, 0, 0]) eye();   
            
