@@ -94,3 +94,4 @@ My 3D things.
 - [Multiplication puzzle V2](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/multiplication_puzzle_generatorV2.md)
 - [Lambda spiral](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/lambda_spiral.md)
 - [Cargo container landmark](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/cargo_container_landmark.md)
+- [Pumpkin chain](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/pumpkin_chain.md)
