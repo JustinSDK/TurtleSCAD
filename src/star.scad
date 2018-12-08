@@ -2,7 +2,9 @@ burst_r1 = 30;
 burst_r2 = 12;
 burst_number = 5;
 burst_height = 6;
-two_sides = "YES";
+two_sides = "NO";
+hollow = "YES";
+inside_scale = 0.9;
 
 module star(burst_r1, burst_r2, burst_number, burst_height) {
     a = 180 / burst_number;
@@ -37,7 +39,20 @@ module star(burst_r1, burst_r2, burst_number, burst_height) {
     }
 }
 
-star(burst_r1, burst_r2, burst_number, burst_height);
-if(two_sides == "YES") {
-   mirror([0, 0, 1]) star(burst_r1, burst_r2, burst_number, burst_height);
-} 
+if(hollow == "YES") {
+    difference() {
+        star(burst_r1, burst_r2, burst_number, burst_height);
+        scale(inside_scale) star(burst_r1, burst_r2, burst_number, burst_height);
+    }
+    if(two_sides == "YES") {
+       mirror([0, 0, 1]) difference() {
+          star(burst_r1, burst_r2, burst_number, burst_height);
+          scale(inside_scale) star(burst_r1, burst_r2, burst_number, burst_height);
+      }
+    } 
+} else {
+    star(burst_r1, burst_r2, burst_number, burst_height);
+    if(two_sides == "YES") {
+       mirror([0, 0, 1]) star(burst_r1, burst_r2, burst_number, burst_height);
+    } 
+}
