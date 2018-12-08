@@ -95,3 +95,4 @@ My 3D things.
 - [Lambda spiral](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/lambda_spiral.md)
 - [Cargo container landmark](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/cargo_container_landmark.md)
 - [Pumpkin chain](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/pumpkin_chain.md)
+- [Customizable star](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/star.md)
