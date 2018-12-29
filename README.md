@@ -96,3 +96,4 @@ My 3D things.
 - [Cargo container landmark](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/cargo_container_landmark.md)
 - [Pumpkin chain](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/pumpkin_chain.md)
 - [Customizable star](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/star.md)
+- [Taiwan elevation puzzle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/taiwan_puzzle.md)
