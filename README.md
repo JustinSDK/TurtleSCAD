@@ -98,3 +98,4 @@ My 3D things.
 - [Customizable star](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/star.md)
 - [Taiwan elevation puzzle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/taiwan_puzzle.md)
 - [Floor stand](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/floor_stand.md)
+- [Floor stand with symbol](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/floor_stand_with_symbol.md)
