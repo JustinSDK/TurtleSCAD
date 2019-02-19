@@ -99,5 +99,5 @@ My 3D things.
 - [Taiwan elevation puzzle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/taiwan_puzzle.md)
 - [Floor stand](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/floor_stand.md)
 - [Floor stand with symbol](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/floor_stand_with_symbol.md)
-- [Daruma doll](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/daruma doll.md)
+- [Daruma doll](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/daruma_doll.md)
 - [Dragon - OpenSCAD / SculptGL](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dragon-openscad.md)
