@@ -143,7 +143,7 @@ module 8_3_torus_knot_fort(leng, thickness, height, bk_number, stair_number) {
             tower(leng, thickness * 0.95, height * 1.125); 
             
         road_width = thickness / 1.5;
-        translate([0, -half_thickness - road_width / 2, half_h])
+        translate([0, -half_thickness - road_width / 2, half_h - height / stair_number / 2])
             walkway(leng, road_width, height / stair_number * (stair_number - 1), thickness, stair_number);
     }
 
