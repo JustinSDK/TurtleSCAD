@@ -102,3 +102,4 @@ My 3D things.
 - [Daruma doll](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/daruma_doll.md)
 - [Dragon - OpenSCAD / SculptGL](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dragon-openscad.md)
 - [(8, 3) torus knot fort](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/8_3_torus_knot_fort.md)
+- [Buddha Duke](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/Buddha_Duke.md)
