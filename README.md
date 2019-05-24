@@ -107,4 +107,4 @@ My 3D things.
 - [Announce](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/announce.md)
 - [Customizable Bearing Captured in Möbius Cut](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/bearing_captured_in_mobius_cut.md)
 - [Customizable Klein Bottle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/klein_bottle.md)
-
+- [Superformula vase](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/superformula_vase.md)
