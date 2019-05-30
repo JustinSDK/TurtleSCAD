@@ -109,3 +109,5 @@ My 3D things.
 - [Customizable Klein Bottle](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/klein_bottle.md)
 - [Superformula vase](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/superformula_vase.md)
 - [Voronoi bracelet](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/voronoi_bracelet.md)
+- [Melted clock](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/melted_clock.md)
+
