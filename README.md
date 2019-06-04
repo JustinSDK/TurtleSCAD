@@ -111,3 +111,4 @@ My 3D things.
 - [Voronoi bracelet](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/voronoi_bracelet.md)
 - [Melted clock](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/melted_clock.md)
 - [Dancing Formosan/Taiwan](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dancing_taiwan.md)
+- [Voronoi sphere](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/voronoi_sphere.md)
