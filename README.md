@@ -113,3 +113,5 @@ My 3D things.
 - [Dancing Formosan/Taiwan](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/dancing_taiwan.md)
 - [Voronoi sphere](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/voronoi_sphere.md)
 - [Voronoi vase](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/voronoi_vase.md)
+- [Spring dog](https://github.com/JustinSDK/TurtleSCAD/blob/master/docs/spring_dog.md)
+
