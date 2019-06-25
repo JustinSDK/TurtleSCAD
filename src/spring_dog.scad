@@ -50,7 +50,7 @@ module latch_concave(r1, r2, h, spacing) {
 module toy_spring(radius, levels, sides, line_thickness, line_distance) {
     $fn = 4;
     
-    spring = circle_path(radius = line_thickness / 2)
+    spring = circle_path(radius = line_thickness / 2);
 
     helix_extrude(spring, 
         radius = radius, 
