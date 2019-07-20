@@ -1,11 +1,11 @@
 rows = 3; // [2:100]
-filename = "taiwan.png";
+filename = "star.png"; // [image_surface:100x100]
 pattern_thickness = 1.5; 
 cube_width = 20;
 spacing = 0.8;
 hole_radius = 2.3; 
 edge_width = 2; 
-plane_top = "YES"; // [YES, NO]
+plane_top = "NO"; // [YES, NO]
 
 module part_for_carve_a_sink(hole_radius, height, edge_width) {
     $fn = 24;
@@ -196,10 +196,12 @@ module dancing_cubes_2(rows, filename, pattern_thickness, cube_width, spacing, h
 			translate([cube_width / 2, cube_width / 2, 0]) 
 				dancing_cubes(rows, cube_width, spacing, hole_radius, edge_width, has_holes, has_joints);
 				
-			intersection() {
-				linear_extrude(pattern_thickness) square(range_width);
-				scale(scale_factor) surface(filename);
-			}
+            
+            intersection() {
+                linear_extrude(pattern_thickness) square(range_width);
+                scale([scale_factor, scale_factor, pattern_thickness]) surface(filename); 
+            }            
+            
 		}		
 	}
 	
@@ -225,7 +227,7 @@ module dancing_cubes_2(rows, filename, pattern_thickness, cube_width, spacing, h
 	translate([0, 0, cube_width])
 		if(plane_top == "YES") {
 			plane_pattern();
-		} else {
+		} else if(filename != "") {
 			pattern();
 		}
 	
