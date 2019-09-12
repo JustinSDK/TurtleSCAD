@@ -1,5 +1,5 @@
 rows = 3; // [2:100]
-filename = "star.png"; // [image_surface:100x100]
+filename = ""; // [image_surface:100x100]
 pattern_thickness = 1.5; 
 cube_width = 20;
 spacing = 0.8;
